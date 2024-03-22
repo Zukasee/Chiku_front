@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,6 +15,7 @@ import { Keyboard, Pagination, Navigation } from 'swiper/modules';
 
 
 function App() {
+
   return (
     <>
       <Swiper
