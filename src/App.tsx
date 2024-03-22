@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import './App.css';
 
 // import required modules
-import { Keyboard, Pagination, Navigation } from 'swiper/modules';
+import { Keyboard,  Navigation } from 'swiper/modules';
 
 
 function App() {
@@ -24,11 +24,8 @@ function App() {
         keyboard={{
           enabled: true,
         }}
-        pagination={{
-          clickable: true,
-        }}
         navigation={false}
-        modules={[Keyboard, Pagination, Navigation]}
+        modules={[Keyboard, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>Slide 1</SwiperSlide>
