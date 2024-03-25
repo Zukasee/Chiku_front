@@ -12,6 +12,7 @@ import './App.css';
 
 // import required modules
 import { Keyboard,  Navigation } from 'swiper/modules';
+import Shawarma from './components/shwarma/shawarma';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
         modules={[Keyboard, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide><Shawarma /></SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>

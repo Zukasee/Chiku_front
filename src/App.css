@@ -17,7 +17,7 @@ body {
 }
 
 .swiper-wrapper {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .swiper {
@@ -28,12 +28,12 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: #e4dada;
 
   /* Center slide text vertically */
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .swiper-slide img {
@@ -41,4 +41,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  .swiper-slide {
+    background: #4c4c4c;
+  }
 }
