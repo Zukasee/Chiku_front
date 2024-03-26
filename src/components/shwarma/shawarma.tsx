@@ -1,12 +1,13 @@
 import React from "react";
 import s from './shawarma.module.css'
+import shawermaImg from '../../fonts/shawarma.png'
 
 const Shawarma = () => {
 
     const shawarmaMenu = [
         {
             name: 'Чикен',
-            pic: '',
+            pic: shawermaImg,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус',
             options: [
                 {
@@ -28,7 +29,7 @@ const Shawarma = () => {
         },
         {
             name: 'Ливанская',
-            pic: '',
+            pic: shawermaImg,
             ingridients: 'Лаваш, курица, соленый огурец, соус, картошка',
             options: [
                 {
@@ -45,7 +46,7 @@ const Shawarma = () => {
         },
         {
             name: 'Арабская',
-            pic: '',
+            pic: shawermaImg,
             ingridients: 'Лаваш, курица, помидоры, соленый огурец, соус, картошка',
             options: [
                 {
@@ -62,7 +63,7 @@ const Shawarma = () => {
         },
         {
             name: 'Мексиканская',
-            pic: '',
+            pic: shawermaImg,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус чесночный, соус острый, лук',
             options: [
                 {
@@ -89,15 +90,17 @@ const Shawarma = () => {
                         </div>
                         <h1 className={s.mainShawaName}>{item.name}</h1>
                         <h3 className={s.mainShawaIngridients}>{item.ingridients}</h3>
-                        {
-                            item.options.map((buttons) => (
-                                <button>
-                                    <h4>{buttons.coast}</h4>
-                                    <p>{buttons.name}</p>
-                                    <h5>{buttons.weight}</h5>
-                                </button>    
-                            ))
-                        }
+                        <div className={s.buttonDiv}>
+                            {
+                                item.options.map((buttons) => (
+                                    <button className={s.buttonShava}>
+                                        <h4>{buttons.coast}р</h4>
+                                        <p>{buttons.name}</p>
+                                        <h5>{buttons.weight}</h5>
+                                    </button>    
+                                ))
+                            }
+                        </div>
                     </div>
                 ))
             }
