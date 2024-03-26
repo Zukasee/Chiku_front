@@ -227,7 +227,9 @@ const Shawarma = () => {
                             <img src={item.pic} alt={item.name}/>
                         </div>
                         <h1 className={s.mainShawaName}>Шаурма "{item.name}"</h1>
-                        <h3 className={s.mainShawaIngridients}>{item.ingridients}</h3>
+                        <div className={s.testForIngridients}>
+                            <h3 className={s.mainShawaIngridients}>{item.ingridients}</h3>
+                        </div>
                         <div className={s.buttonDiv}>
                             {
                                 item.options.map((buttons, buttonIndex) => (
