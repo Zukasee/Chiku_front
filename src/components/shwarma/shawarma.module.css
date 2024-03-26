@@ -8,14 +8,14 @@
 
 .mainShawaName {
     font-size: 18px;
-    color: var(--tg-theme-bg-color);
+    color: black;
     margin-top: 7px;
     margin-bottom: 0px;
 }
 
 .mainShawaIngridients {
     font-size: 8px;
-    color: var(--tg-theme-text-color);
+    color: black;
 }
 
 .img {
@@ -49,3 +49,12 @@
     margin-bottom: 0px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .mainShawaName {
+        color: white;
+    }
+
+    .mainShawaIngridients {
+        color: white;
+    }
+}
