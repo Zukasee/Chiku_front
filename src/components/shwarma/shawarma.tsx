@@ -28,6 +28,30 @@ const Shawarma = () => {
             ]
         },
         {
+            name: 'Студенческая',
+            pic: shawermaImg,
+            ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус',
+            options: [
+                {
+                    name: 'студент',
+                    weight: 400,
+                    coast: 5
+                }
+            ]
+        },
+        {
+            name: 'Машрум',
+            pic: shawermaImg,
+            ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, кетчуп, соус сырный, сыр, грибы, майонез',
+            options: [
+                {
+                    name: 'стандарт',
+                    weight: 500,
+                    coast: 8
+                }
+            ]
+        },
+        {
             name: 'Ливанская',
             pic: shawermaImg,
             ingridients: 'Лаваш, курица, соленый огурец, соус, картошка',
@@ -156,7 +180,7 @@ const Shawarma = () => {
         {
             name: 'с говядиной',
             pic: shawermaImg,
-            ingridients: 'Говядина блядь, какая нахуй говядина',
+            ingridients: 'Говядина блядь, какая нахуй говядина, где нормальное описание',
             options: [
                 {
                     name: 'стандарт',
@@ -173,6 +197,23 @@ const Shawarma = () => {
                     weight: 700,
                     coast: 18
                 },
+            ]
+        },
+        {
+            name: 'Фалафель',
+            pic: shawermaImg,
+            ingridients: 'Лаваш, котлета из нута, капуста, помидоры, соленый огурец, соус',
+            options: [
+                {
+                    name: 'стандарт',
+                    weight: 400,
+                    coast: 5
+                },
+                {
+                    name: 'сирийски',
+                    weight: 500,
+                    coast: 6
+                }
             ]
         },
     ]
