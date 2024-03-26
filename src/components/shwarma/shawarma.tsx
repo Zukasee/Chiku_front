@@ -151,7 +151,7 @@ const Shawarma = () => {
         {
             name: 'Чику',
             pic: shawermaImg,
-            ingridients: 'Супер вкусный, супер секретный состав',
+            ingridients: 'Супер вкусный и супер секретный состав',
             options: [
                 {
                     name: 'стандарт',
