@@ -8,7 +8,7 @@
 
 .mainShawaName {
     font-size: 18px;
-    color: var(--tg-theme-text-color);
+    color: var(--tg-theme-bg-color);
     margin-top: 7px;
     margin-bottom: 0px;
 }
