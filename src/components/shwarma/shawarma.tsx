@@ -1,6 +1,6 @@
 import React from "react";
 import s from './shawarma.module.css'
-import shawermaImg from '../../fonts/shawarma.png'
+import shawermaImg from '../../fonts/shawarma2.png'
 
 const Shawarma = () => {
 
@@ -75,6 +75,103 @@ const Shawarma = () => {
                     name: 'стандарт',
                     weight: 600,
                     coast: 11
+                },
+            ]
+        },
+        {
+            name: 'Барбекю',
+            pic: shawermaImg,
+            ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус барбекю, чесночный соус',
+            options: [
+                {
+                    name: 'мини',
+                    weight: 500,
+                    coast: 8
+                },
+                {
+                    name: 'стандарт',
+                    weight: 600,
+                    coast: 10
+                },
+            ]
+        },
+        {
+            name: 'Арабская',
+            pic: shawermaImg,
+            ingridients: 'Лаваш, говядина, помидоры, соленый огурец, соус, картошка',
+            options: [
+                {
+                    name: 'стандарт',
+                    weight: 500,
+                    coast: 12.50
+                }
+            ]
+        },
+        {
+            name: 'Турецкая',
+            pic: shawermaImg,
+            ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус турецкий, соус чесночный',
+            options: [
+                {
+                    name: 'мини',
+                    weight: 500,
+                    coast: 8.50
+                },
+                {
+                    name: 'стандарт',
+                    weight: 600,
+                    coast: 10
+                },
+            ]
+        },
+        {
+            name: 'Чику',
+            pic: shawermaImg,
+            ingridients: 'Супер вкусный, супер секретный состав',
+            options: [
+                {
+                    name: 'стандарт',
+                    weight: 700,
+                    coast: 13
+                }
+            ]
+        },
+        {
+            name: 'Итальянская',
+            pic: shawermaImg,
+            ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус томатный, соус чесночный, сыр, грибы',
+            options: [
+                {
+                    name: 'мини',
+                    weight: 500,
+                    coast: 9
+                },
+                {
+                    name: 'стандарт',
+                    weight: 600,
+                    coast: 11
+                },
+            ]
+        },
+        {
+            name: 'с говядиной',
+            pic: shawermaImg,
+            ingridients: 'Говядина блядь, какая нахуй говядина',
+            options: [
+                {
+                    name: 'стандарт',
+                    weight: 400,
+                    coast: 9
+                },
+                {
+                    name: 'делюкс',
+                    weight: 500,
+                    coast: 11
+                },
+                {
+                    name: 'чику',
+                    weight: 700,
+                    coast: 18
                 },
             ]
         },
