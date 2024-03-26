@@ -92,8 +92,8 @@ const Shawarma = () => {
                         <h3 className={s.mainShawaIngridients}>{item.ingridients}</h3>
                         <div className={s.buttonDiv}>
                             {
-                                item.options.map((buttons) => (
-                                    <button className={s.buttonShava}>
+                                item.options.map((buttons, buttonIndex) => (
+                                    <button className={`${s.buttonShava} ${s[`buttonColor${buttonIndex}`]}`}>
                                         <p>{buttons.name}</p>
                                         <h4>{buttons.coast}р</h4>
                                         <h5>{buttons.weight}г</h5>

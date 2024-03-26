@@ -39,6 +39,7 @@
     height: 70px;
     border-radius: 7px;
     min-width: 52px;
+    border: 1px solid rgb(174, 4, 4);
 }
 
 .buttonShava h4 {
@@ -62,12 +63,43 @@
     color: aliceblue;
 }
 
+.buttonColor0 {
+    background-color: rgb(224, 2, 2);
+    border: 1px solid rgb(174, 4, 4);
+}
+
+.buttonColor1 {
+    background-color: rgb(224, 113, 2);
+    border: 1px solid rgb(205, 103, 0);
+}
+
+.buttonColor2 {
+    background-color: rgb(224, 209, 2);
+    border: 1px solid rgb(209, 195, 0);
+}
+
 @media (prefers-color-scheme: dark) {
     .mainShawaName {
         color: white;
     }
 
     .mainShawaIngridients {
-        color: white;
+        color: rgb(230, 230, 230);
+    }
+
+    .buttonShava {
+        border: 1px solid rgb(174, 4, 4);
+    }
+
+    .buttonColor0 {
+        border: 1px solid rgb(174, 4, 4);
+    }
+    
+    .buttonColor1 {
+        border: 1px solid rgb(224, 112, 0);
+    }
+    
+    .buttonColor2 {
+        border: 1px solid rgb(225, 210, 0);
     }
 }
