@@ -38,7 +38,7 @@
     background-color: rgb(224, 2, 2);
     height: 70px;
     border-radius: 7px;
-    min-width: 52px;
+    min-width: 55px;
     border: 1px solid rgb(174, 4, 4);
 }
 
@@ -65,17 +65,17 @@
 
 .buttonColor0 {
     background-color: rgb(224, 2, 2);
-    border: 1px solid rgb(174, 4, 4);
+    border: 1px solid rgb(172, 3, 3);
 }
 
 .buttonColor1 {
     background-color: rgb(224, 113, 2);
-    border: 1px solid rgb(205, 103, 0);
+    border: 1px solid rgb(189, 94, 0);
 }
 
 .buttonColor2 {
     background-color: rgb(224, 209, 2);
-    border: 1px solid rgb(209, 195, 0);
+    border: 1px solid rgb(201, 187, 0);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -87,7 +87,7 @@
         color: rgb(230, 230, 230);
     }
 
-    .buttonShava {
+    /* .buttonShava {
         border: 1px solid rgb(174, 4, 4);
     }
 
@@ -101,5 +101,5 @@
     
     .buttonColor2 {
         border: 1px solid rgb(225, 210, 0);
-    }
+    } */
 }
