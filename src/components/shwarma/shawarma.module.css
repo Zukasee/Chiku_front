@@ -124,7 +124,7 @@
         margin-bottom: 12px;
         display: grid;
         grid-template-columns: 115px auto;
-        grid-template-rows: 48px 42px 87px;
+        grid-template-rows: 48px 50px 79px;
     }
 
     .mainShawaName {
@@ -135,5 +135,6 @@
 
     .mainShawaIngridients {
         width: auto;
+        margin-top: 7px;
     }
 }
