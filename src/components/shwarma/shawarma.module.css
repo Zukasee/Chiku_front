@@ -27,7 +27,10 @@
 .buttonDiv {
     grid-column-start: 2;
     height: 70px;
-    width: 120px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
     display: flex;
 }
 
@@ -35,6 +38,7 @@
     background-color: rgb(224, 2, 2);
     height: 70px;
     border-radius: 7px;
+    min-width: 52px;
 }
 
 .buttonShava h4 {
