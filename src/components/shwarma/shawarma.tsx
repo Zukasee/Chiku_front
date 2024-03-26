@@ -88,7 +88,7 @@ const Shawarma = () => {
                         <div className={s.img}>
                             <img src={item.pic} alt={item.name}/>
                         </div>
-                        <h1 className={s.mainShawaName}>{item.name}</h1>
+                        <h1 className={s.mainShawaName}>Шаурма "{item.name}"</h1>
                         <h3 className={s.mainShawaIngridients}>{item.ingridients}</h3>
                         <div className={s.buttonDiv}>
                             {

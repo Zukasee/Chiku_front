@@ -3,15 +3,19 @@
     height: 140px;
     display: grid;
     grid-template-columns: 140px auto;
-    grid-template-rows: 15px 40px 65px;
+    grid-template-rows: 25px 40px 80px;
 }
 
 .mainShawaName {
-    font-size: 10px;
+    font-size: 18px;
+    color: var(--tg-theme-text-color);
+    margin-top: 7px;
+    margin-bottom: 0px;
 }
 
 .mainShawaIngridients {
     font-size: 8px;
+    color: var(--tg-theme-text-color);
 }
 
 .img {
