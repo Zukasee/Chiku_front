@@ -94,9 +94,9 @@ const Shawarma = () => {
                             {
                                 item.options.map((buttons) => (
                                     <button className={s.buttonShava}>
-                                        <h4>{buttons.coast}р</h4>
                                         <p>{buttons.name}</p>
-                                        <h5>{buttons.weight}</h5>
+                                        <h4>{buttons.coast}р</h4>
+                                        <h5>{buttons.weight}г</h5>
                                     </button>    
                                 ))
                             }
