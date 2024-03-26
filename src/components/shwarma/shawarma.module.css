@@ -3,7 +3,7 @@
     height: 150px;
     margin-bottom: 12px;
     display: grid;
-    grid-template-columns: 120px auto;
+    grid-template-columns: 130px auto;
     grid-template-rows: 30px 40px 80px;
 }
 
@@ -17,6 +17,9 @@
 .mainShawaIngridients {
     font-size: 11px;
     color: black;
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img {
@@ -104,7 +107,7 @@
     } */
 }
 
-@media (max-width: 351px) {
+@media (max-width: 361px) {
     .mainShawa {
         width: 100%;
         height: 177px;
@@ -118,5 +121,9 @@
         width: 150px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .mainShawaIngridients {
+        width: auto;
     }
 }

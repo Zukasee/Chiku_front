@@ -1,6 +1,6 @@
 import React from "react";
 import s from './shawarma.module.css'
-import shawermaImg from '../../fonts/shawarma2.png'
+import shawermaImg from '../../fonts/shawarma3.png'
 
 const Shawarma = () => {
 
@@ -8,7 +8,7 @@ const Shawarma = () => {
         {
             name: 'Чикен',
             pic: shawermaImg,
-            ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус',
+            ingridients: `Лаваш, курица, капуста, помидоры, соленый огурец, соус`,
             options: [
                 {
                     name: 'мини',
