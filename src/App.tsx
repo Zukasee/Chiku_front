@@ -32,7 +32,7 @@ function App() {
       >
         <SwiperSlide><Shawarma /></SwiperSlide>
         <SwiperSlide><Garnish /></SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Others</SwiperSlide>
       </Swiper>
     </>
   );

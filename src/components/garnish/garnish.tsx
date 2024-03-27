@@ -1,6 +1,6 @@
 import React from "react";
 import s from './garnish.module.css'
-import pilafPic from '../../fonts/plov.png'
+import pilafPic from '../../fonts/plov2.png'
 
 const Garnish = () => {
 
@@ -41,8 +41,8 @@ const Garnish = () => {
                             <h3>{item.description}</h3>
                         </div>
                         <button className={s.button}>
-                            <h4>{item.coast}</h4>
-                            <h5>{item.weight}</h5>
+                            <h4>{item.coast}р</h4>
+                            <h5>{item.weight}г</h5>
                         </button>
                     </div>
                 ))
