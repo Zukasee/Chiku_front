@@ -9,25 +9,33 @@ const Garnish = () => {
 
     const pilafs = [
         {
-            name: 'Плов с курицей',
+            name: 'Плов',
             pic: pilafPic,
-            description: 'Курица, лук, перец, кумин, рис, кориандер',
-            weight: 500,
-            coast: 10,
-        },
-        {
-            name: 'Плов с говядиной',
-            pic: pilafPic,
-            description: 'Говядина, лук, перец, кумин, рис, чеснок',
-            weight: 500,
-            coast: 12.5,
+            description: 'Курица/говядина, лук, перец, кумин, рис, кориандер',
+            options: [
+                {
+                    name: 'Курица',
+                    coast: 10,
+                    weight: 150 
+                 },
+                 {
+                    name: 'Говядина',
+                    coast: 12.5,
+                    weight: 120 
+                 }
+            ],
         },
         {
             name: 'Комплекс с курицей',
             pic: pilafPic,
             description: 'Курица, картофель фри, свежие огурцы и помидоры, соус',
-            weight: 450,
-            coast: 12.5,
+            options: [
+                {
+                    name: 'стандарт',
+                    coast: 10,
+                    weight: 150 
+                 },
+            ]
         },
     ]
 
@@ -87,10 +95,17 @@ const Garnish = () => {
                         <div className={s.ingridients}>
                             <h3>{item.description}</h3>
                         </div>
-                        <button className={s.button}>
-                            <h4>{item.coast}р</h4>
-                            <h5>{item.weight}г</h5>
-                        </button>
+                        <div className={s.buttonPilafhDiv}>
+                            {
+                                item.options.map((button, buttonIndex) => (
+                                    <button className={`${s.buttonGarnish} ${s[`buttonColor${buttonIndex}`]}`}>
+                                        <p>{button.name}</p>
+                                        <h4>{button.coast}р</h4>
+                                        <h5>{button.weight}г</h5>
+                                    </button>
+                                ))
+                            }
+                        </div>
                     </div>
                 ))
             }

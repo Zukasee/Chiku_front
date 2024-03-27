@@ -66,7 +66,7 @@
 
 .buttonGarnishDiv {
     grid-column-start: 2;
-    height: 70px;
+    height: auto;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -76,7 +76,7 @@
 
 .buttonGarnish {
     background-color: rgb(224, 2, 2);
-    height: 70px;
+    height: 68px;
     border-radius: 7px;
     min-width: 57px;
     border: 1px solid rgb(174, 4, 4);
@@ -120,6 +120,10 @@
     display: grid;
     grid-template-columns: 150px auto;
     grid-template-rows: 30px 32px 88px;
+}
+
+.buttonPilafhDiv {
+    height: auto;
 }
 
 @media (prefers-color-scheme: dark) {
