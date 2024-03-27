@@ -12,8 +12,8 @@ import 'swiper/css/navigation';
 import { Keyboard,  Navigation } from 'swiper/modules';
 
 import s from './productList.module.css'
-import Shawarma from '../shwarma/shawarma';
-import Garnish from '../garnish/garnish';
+import Shawarma from './shwarma/shawarma';
+import Garnish from './garnish/garnish';
 
 const ProductList = () => {
     return (

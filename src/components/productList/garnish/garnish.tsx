@@ -1,9 +1,9 @@
 import React from "react";
 import s from './garnish.module.css'
-import pilafPic from '../../fonts/plov2.png'
-import village from '../../fonts/village2.png'
-import onion from '../../fonts/onion.png'
-import nuggets from '../../fonts/nuggets.png'
+import pilafPic from '../../../fonts/plov2.png'
+import village from '../../../fonts/village2.png'
+import onion from '../../../fonts/onion.png'
+import nuggets from '../../../fonts/nuggets.png'
 
 const Garnish = () => {
 
