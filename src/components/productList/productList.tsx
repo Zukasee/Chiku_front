@@ -14,6 +14,7 @@ import { Keyboard,  Navigation } from 'swiper/modules';
 import s from './productList.module.css'
 import Shawarma from './shwarma/shawarma';
 import Garnish from './garnish/garnish';
+import Others from './others/others';
 
 const ProductList = () => {
     return (
@@ -30,7 +31,7 @@ const ProductList = () => {
       >
         <SwiperSlide><Shawarma /></SwiperSlide>
         <SwiperSlide><Garnish /></SwiperSlide>
-        <SwiperSlide>Others</SwiperSlide>
+        <SwiperSlide><Others /></SwiperSlide>
         </Swiper>
         </>
     )
