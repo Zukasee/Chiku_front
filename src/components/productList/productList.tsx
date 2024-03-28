@@ -25,6 +25,7 @@ const ProductList = () => {
           enabled: true,
         }}
         navigation={false}
+        autoHeight={true}
         modules={[Keyboard, Navigation]}
         className="mySwiper"
       >
