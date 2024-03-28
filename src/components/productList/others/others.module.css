@@ -10,17 +10,58 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 40px 180px 50px;
+    grid-template-rows: auto auto;
+    grid-row-gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .button h3 {
-    margin: 0px;
+    font-size: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: aliceblue;
+    font-size: 20px;
 }
 
 .button h4 {
-    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: aliceblue;
 }
 
 .mainItem h2 {
-    margin: 0px;
+    font-size: 19px;
+    color: black;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+    margin-bottom: 0px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    height: 65px;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(224, 2, 2);
+    border: 1px solid rgb(174, 4, 4);
+    border-radius: 7px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .mainItem h2 {
+        color: white;
+    }
 }

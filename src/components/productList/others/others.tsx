@@ -1,11 +1,11 @@
 import React from "react";
 import s from './others.module.css'
-import hotdog1 from '../../../fonts/hotdog1.png'
+import hotdog1 from '../../../fonts/hotdog12.png'
 import hotdog2 from '../../../fonts/hotdog2.png'
-import kvas from '../../../fonts/kvas.png'
+import shveps from '../../../fonts/shveps.png'
 import sprite from '../../../fonts/sprite.png'
-import fanta from '../../../fonts/fanta.jpg'
-import cola from '../../../fonts/cola.jpg'
+import fanta from '../../../fonts/fanta.png'
+import cola from '../../../fonts/cola.png'
 
 const Others = () => {
 
@@ -23,8 +23,8 @@ const Others = () => {
             weight: '240г',
         },
         {
-            name: 'Квас',
-            pic: kvas,
+            name: 'Швепс',
+            pic: shveps,
             coast: 2,
             weight: '0.5л',
         },
@@ -54,9 +54,11 @@ const Others = () => {
                 others.map((item) => (
                     <div className={s.mainItem}>
                         <h2>{item.name}</h2>
-                        <img src={item.pic} alt={item.name} />
+                        <div className={s.img}>
+                            <img src={item.pic} alt={item.name} />
+                        </div>
                         <button className={s.button}>
-                            <h3>{item.coast}</h3>
+                            <h3>{item.coast}р</h3>
                             <h4>{item.weight}</h4>
                         </button>
                     </div>
