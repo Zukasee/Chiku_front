@@ -1,6 +1,6 @@
 import React from "react";
 import s from './shawarma.module.css'
-import shawermaImg from '../../../fonts/shawarma3.png'
+import shawermaImg from '../../../fonts/chiken.png'
 
 const Shawarma = () => {
 
