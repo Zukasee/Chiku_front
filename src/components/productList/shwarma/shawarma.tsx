@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useCallback, useContext, useEffect } from "react";
 import s from './shawarma.module.css'
 import shawermaImg from '../../../fonts/chiken.png'
+import { userContext } from "../../../App";
+import { useNavigate } from "react-router-dom";
+
+interface MenuItem {
+    name: string;
+    pic: string;
+    ingridients: string;
+    options: {
+        name: string;
+        weight: number;
+        coast: number;
+    }[];
+}
+
+interface OrderItem extends MenuItem {
+    quantity: number;
+    optionIndex: number;
+}
 
 const Shawarma = () => {
 
-    const shawarmaMenu = [
+    const shawarmaMenu: MenuItem[] = [
         {
             name: 'Чикен',
             pic: shawermaImg,
@@ -218,11 +236,69 @@ const Shawarma = () => {
         },
     ]
 
+    const tg = (window as any).Telegram.WebApp;
+    const navigate = useNavigate()
+    const {order, setOrder} = useContext(userContext)
+
+    const openForm = useCallback(() => {
+        tg.MainButton.hide();
+        navigate('/form')
+    }, [tg.MainButton, navigate])
+
+    useEffect(() => {
+        tg.onEvent('mainButtonClicked', openForm)
+        return () => {
+            tg.offEvent('mainButtonClicked', openForm)
+        } 
+    }, [tg, openForm])
+
+    useEffect(() => {
+        if (order !== 0) {
+            tg.MainButton.show();
+        } else {
+            tg.MainButton.hide();
+        }
+    })
+
+    const handleAddToOrder = (item: MenuItem, optionIndex: number) => {
+        // Проверка, является ли order массивом
+        if (!Array.isArray(order)) {
+            // Если order не является массивом, установите его в пустой массив
+            setOrder([]);
+            return;
+        }
+    
+        const existingItem = order.find((orderItem: OrderItem) => orderItem.name === item.name && orderItem.optionIndex === optionIndex) as OrderItem | undefined;
+        if (existingItem) {
+            const updatedOrder = order.map((orderItem: OrderItem) => {
+                if (orderItem.name === item.name && orderItem.optionIndex === optionIndex) {
+                    return { ...orderItem, quantity: orderItem.quantity + 1};
+                }
+                return orderItem;
+            });
+            setOrder(updatedOrder);
+        } else {
+            setOrder([...order, { ...item, optionIndex, quantity: 1 }]);
+        }
+
+        console.log(order)
+    };
+    
+
         return (
-        <>
+            <>
+            {order.map((item: any, index: any) => (
+            <div key={index}>
+                <p>Name: {item.name}</p>
+                <p>Option: {item.options[item.optionIndex].name}</p>
+                <p>Quantity: {item.quantity}</p>
+                <p>Price per piece: {item.options[item.optionIndex].coast}р</p>
+                <p>Weight per piece: {item.options[item.optionIndex].weight}г</p>
+            </div>
+        ))}
             {
-                shawarmaMenu.map((item) => (
-                    <div className={s.mainShawa}> 
+                shawarmaMenu.map((item: MenuItem, index: number) => (
+                    <div key={index} className={s.mainShawa}> 
                         <div className={s.img}>
                             <img src={item.pic} alt={item.name}/>
                         </div>
@@ -231,15 +307,17 @@ const Shawarma = () => {
                             <h3 className={s.mainShawaIngridients}>{item.ingridients}</h3>
                         </div>
                         <div className={s.buttonDiv}>
-                            {
-                                item.options.map((buttons, buttonIndex) => (
-                                    <button className={`${s.buttonShava} ${s[`buttonColor${buttonIndex}`]}`}>
-                                        <p>{buttons.name}</p>
-                                        <h4>{buttons.coast}р</h4>
-                                        <h5>{buttons.weight}г</h5>
-                                    </button>    
-                                ))
-                            }
+                            {item.options.map((buttons, buttonIndex) => (
+                                <button
+                                    key={buttonIndex}
+                                    className={`${s.buttonShava} ${s[`buttonColor${buttonIndex}`]}`}
+                                    onClick={() => handleAddToOrder(item, buttonIndex)}
+                                >
+                                    <p>{buttons.name}</p>
+                                    <h4>{buttons.coast}р</h4>
+                                    <h5>{buttons.weight}г</h5>
+                                </button>
+                            ))}
                         </div>
                     </div>
                 ))
