@@ -5,6 +5,8 @@ import { userContext } from "../../App";
 const Form = () => {
 
     const {order, setOrder} = useContext(userContext)
+    setOrder(order)
+
 
     return (
         <>
