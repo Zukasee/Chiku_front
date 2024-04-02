@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import s from './shawarma.module.css'
 import shawermaImg from '../../../fonts/chiken.png'
 import student from '../../../fonts/student.png'
@@ -251,6 +251,7 @@ const Shawarma = () => {
     const tg = (window as any).Telegram.WebApp;
     const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
+    const [totalPrice, setTotalPrice] = useState<number>(0)
 
     const openForm = useCallback(() => {
         tg.MainButton.hide();
@@ -265,12 +266,27 @@ const Shawarma = () => {
     }, [tg, openForm])
 
     useEffect(() => {
-        if (order !== null) {
+        if (totalPrice !== 0) {
             tg.MainButton.show();
         } else {
             tg.MainButton.hide();
         }
     })
+
+    useEffect(() => {
+        let totalPrice = 0
+        order.forEach((item: OrderItem) => {
+            const option = item.options[item.optionIndex]
+            totalPrice += + option.coast * item.quantity
+        })
+        setTotalPrice(totalPrice)
+    }, [order])
+
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: `Заказать ${totalPrice}p`
+        })
+    }, [totalPrice, order])
 
     const handleAddToOrder = (item: MenuItem, optionIndex: number) => {
         // Проверка, является ли order массивом

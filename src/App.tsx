@@ -9,7 +9,7 @@ export const userContext = React.createContext<any>(null)
 
 function App() {
 
-  const [order, setOrder] = useState(null)
+  const [order, setOrder] = useState([])
 
   return (
     <>
