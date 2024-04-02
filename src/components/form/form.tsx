@@ -12,12 +12,14 @@ const Form = () => {
         <>
          form
          {order.map((item: any, index: any) => (
-    <div key={index}>
-        <p>Name: {item.name}</p>
-        <p>Quantity: {item.quantity}</p>
-        {/* Вывод других свойств объекта */}
-    </div>
-))}
+            <div key={index}>
+                <p>Name: {item.name}</p>
+                <p>Option: {item.options[item.optionIndex].name}</p>
+                <p>Quantity: {item.quantity}</p>
+                <p>Price per piece: {item.options[item.optionIndex].coast}р</p>
+                <p>Weight per piece: {item.options[item.optionIndex].weight}г</p>
+            </div>
+        ))}
         </>
     )
 }

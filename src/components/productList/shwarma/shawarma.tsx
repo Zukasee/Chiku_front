@@ -253,7 +253,7 @@ const Shawarma = () => {
     }, [tg, openForm])
 
     useEffect(() => {
-        if (order !== 0) {
+        if (order !== null) {
             tg.MainButton.show();
         } else {
             tg.MainButton.hide();
@@ -287,15 +287,6 @@ const Shawarma = () => {
 
         return (
             <>
-            {order.map((item: any, index: any) => (
-            <div key={index}>
-                <p>Name: {item.name}</p>
-                <p>Option: {item.options[item.optionIndex].name}</p>
-                <p>Quantity: {item.quantity}</p>
-                <p>Price per piece: {item.options[item.optionIndex].coast}р</p>
-                <p>Weight per piece: {item.options[item.optionIndex].weight}г</p>
-            </div>
-        ))}
             {
                 shawarmaMenu.map((item: MenuItem, index: number) => (
                     <div key={index} className={s.mainShawa}> 

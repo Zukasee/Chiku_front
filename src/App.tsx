@@ -4,7 +4,7 @@ import './App.css';
 import ProductList from './components/productList/productList';
 import Form from './components/form/form';
 
-export const userContext = React.createContext<any>([])
+export const userContext = React.createContext<any>(null)
 
 
 function App() {
