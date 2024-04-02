@@ -286,7 +286,7 @@ const Shawarma = () => {
         tg.MainButton.setParams({
             text: `Заказать ${totalPrice}p`
         })
-    }, [totalPrice, order])
+    }, [totalPrice, order, tg.MainButton])
 
     const handleAddToOrder = (item: MenuItem, optionIndex: number) => {
         // Проверка, является ли order массивом
