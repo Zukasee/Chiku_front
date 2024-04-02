@@ -1,6 +1,18 @@
 import React, { useCallback, useContext, useEffect } from "react";
 import s from './shawarma.module.css'
 import shawermaImg from '../../../fonts/chiken.png'
+import student from '../../../fonts/student.png'
+import mashroom from '../../../fonts/mashroom.png'
+import livanskaya from '../../../fonts/livanskaya.png'
+import mexican from '../../../fonts/mexican.png'
+import arab from '../../../fonts/arab.png'
+import turkey from '../../../fonts/turkey.png'
+import chiky from '../../../fonts/chiku.png'
+import italy from '../../../fonts/italy.png'
+import govno from '../../../fonts/govno.png'
+import falafel from '../../../fonts/falafel.png'
+import barbeku from '../../../fonts/barbeku.png'
+
 import { userContext } from "../../../App";
 import { useNavigate } from "react-router-dom";
 
@@ -47,7 +59,7 @@ const Shawarma = () => {
         },
         {
             name: 'Студенческая',
-            pic: shawermaImg,
+            pic: student,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус',
             options: [
                 {
@@ -59,7 +71,7 @@ const Shawarma = () => {
         },
         {
             name: 'Машрум',
-            pic: shawermaImg,
+            pic: mashroom,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, кетчуп, соус сырный, сыр, грибы, майонез',
             options: [
                 {
@@ -71,7 +83,7 @@ const Shawarma = () => {
         },
         {
             name: 'Ливанская',
-            pic: shawermaImg,
+            pic: livanskaya,
             ingridients: 'Лаваш, курица, соленый огурец, соус, картошка',
             options: [
                 {
@@ -88,7 +100,7 @@ const Shawarma = () => {
         },
         {
             name: 'Арабская',
-            pic: shawermaImg,
+            pic: arab,
             ingridients: 'Лаваш, курица, помидоры, соленый огурец, соус, картошка',
             options: [
                 {
@@ -105,7 +117,7 @@ const Shawarma = () => {
         },
         {
             name: 'Мексиканская',
-            pic: shawermaImg,
+            pic: mexican,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус чесночный, соус острый, лук',
             options: [
                 {
@@ -122,7 +134,7 @@ const Shawarma = () => {
         },
         {
             name: 'Барбекю',
-            pic: shawermaImg,
+            pic: barbeku,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус барбекю, чесночный соус',
             options: [
                 {
@@ -138,8 +150,8 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Арабская',
-            pic: shawermaImg,
+            name: 'Арабская Х',
+            pic: arab,
             ingridients: 'Лаваш, говядина, помидоры, соленый огурец, соус, картошка',
             options: [
                 {
@@ -151,7 +163,7 @@ const Shawarma = () => {
         },
         {
             name: 'Турецкая',
-            pic: shawermaImg,
+            pic: turkey,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус турецкий, соус чесночный',
             options: [
                 {
@@ -168,7 +180,7 @@ const Shawarma = () => {
         },
         {
             name: 'Чику',
-            pic: shawermaImg,
+            pic: chiky,
             ingridients: 'Супер вкусный и супер секретный состав',
             options: [
                 {
@@ -180,7 +192,7 @@ const Shawarma = () => {
         },
         {
             name: 'Итальянская',
-            pic: shawermaImg,
+            pic: italy,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус томатный, соус чесночный, сыр, грибы',
             options: [
                 {
@@ -197,7 +209,7 @@ const Shawarma = () => {
         },
         {
             name: 'с говядиной',
-            pic: shawermaImg,
+            pic: govno,
             ingridients: 'Говядина блядь, какая нахуй говядина, где нормальное описание',
             options: [
                 {
@@ -219,7 +231,7 @@ const Shawarma = () => {
         },
         {
             name: 'Фалафель',
-            pic: shawermaImg,
+            pic: falafel,
             ingridients: 'Лаваш, котлета из нута, капуста, помидоры, соленый огурец, соус',
             options: [
                 {
