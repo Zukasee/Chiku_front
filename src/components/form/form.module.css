@@ -1,14 +1,17 @@
 .item {
     width: 100%;
     height: 120px;
+    margin-bottom: 5px;
     display: grid;
-    grid-template-rows: 30px 40px 50px;
+    grid-template-rows: 40px 40px 40px;
     grid-template-columns: 100px auto;
+    grid-column-gap: 20px;
 }
 
 .item h2 {
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 0px;
+    font-size: 20px;
 }
 
 .item h4 {
@@ -30,6 +33,7 @@
     display: flex;
     width: auto;
     height: auto;
+    
 }
 
 .bot {
@@ -38,14 +42,17 @@
 }
 
 .bot button {
-    width: px;
-    height: auto;
+    width: 28px;
+    height: 28px;
+    margin: auto 0px;
 }
 
 h6 {
     margin: 0px;
+    margin-left: 55%;
+    font-size: 16px;
 }
 
 h5 {
-    margin: 0px;
+    margin: auto 10px;
 }
