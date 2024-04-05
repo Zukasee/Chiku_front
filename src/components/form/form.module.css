@@ -42,9 +42,16 @@
 }
 
 .bot button {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     margin: auto 0px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
 }
 
 h6 {
@@ -55,4 +62,27 @@ h6 {
 
 h5 {
     margin: auto 10px;
+    font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #242426;
+      }
+
+      .item h2 {
+        color: aliceblue;
+      }
+
+      .item h4 {
+        color: aliceblue;
+      }
+
+      h6 {
+        color: aliceblue;
+      }
+
+      h5 {
+        color: aliceblue;
+      }
 }
