@@ -1,6 +1,18 @@
 import React, { useContext, useEffect } from "react";
 import { userContext } from "../../App";
 import pic from '../../fonts/chiken.png'
+// import Чикен from '../../fonts/chiken.png'
+// import Студенческая from '../../fonts/student.png'
+// import Машрум from '../../fonts/mashroom.png'
+// import Ливанская from '../../fonts/livanskaya.png'
+// import Мексиканская from '../../fonts/mexican.png'
+// import Арабская from '../../fonts/arab.png'
+// import Турецкая from '../../fonts/turkey.png'
+// import Чику from '../../fonts/chiku.png'
+// import Итальянская from '../../../fonts/italy.png'
+// import govno from '../../../fonts/govno.png'
+// import falafel from '../../../fonts/falafel.png'
+// import Барбекю from '../../../fonts/barbeku.png'
 import s from './form.module.css'
 import { useNavigate } from "react-router-dom";
 
