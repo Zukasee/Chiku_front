@@ -51,8 +51,8 @@ const Form = () => {
     return (
         <>
          <div className={s.header}>
-            <h1>Ваш заказ:</h1>
-            <p onClick={toMenu}>в меню</p>
+            <h2>Ваш заказ:</h2>
+            <h4 onClick={toMenu}>вернуться к меню</h4>
          </div>
          {order.map((item: any, index: any) => (
             <div className={s.item} key={index}>

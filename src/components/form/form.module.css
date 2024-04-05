@@ -80,21 +80,21 @@ hr {
 
 .header {
     display: flex;
+    height: 40px;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
-.header h1 {
+.header h2 {
     font-size: 22px;
-    margin-top: 2px;
-    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
-.header p {
+.header h4 {
     color: rgb(101, 209, 0);
-    font-size: 18px;
-    margin-top: 2px;
-    margin-bottom: 5px;
-    margin-right: 5px;
+    /* font-size: 18px; */
+    margin-top: 16px;
+    margin-right: 15px;
 }
 
 
@@ -116,11 +116,11 @@ hr {
         background-color: black;
       }
 
-      .header h1 {
+      .header h2 {
         color: aliceblue;
       }
 
-      .header p {
+      .header h4 {
         color: rgb(161, 255, 10);
       }
 }

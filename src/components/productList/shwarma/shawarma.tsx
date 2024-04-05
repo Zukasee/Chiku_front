@@ -284,7 +284,7 @@ const Shawarma = () => {
 
     useEffect(() => {
         tg.MainButton.setParams({
-            text: `Заказать ${totalPrice}p`
+            text: `Далее ${totalPrice} p`
         })
     }, [totalPrice, order, tg.MainButton])
 
