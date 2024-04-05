@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { userContext } from "../../App";
 import pic from '../../fonts/chiken.png'
 // import Чикен from '../../fonts/chiken.png'
@@ -20,6 +20,7 @@ const Form = () => {
 
     const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
+    const [totalPrice, setTotalPrice] = useState<number>()
 
     const decrement = (index: number) => {
         const updatedOrder = [...order]
@@ -48,6 +49,15 @@ const Form = () => {
         navigate('/')
     }
 
+    useEffect(() => {
+        let totalPrice = 0 
+        order.forEach((item:any) => {
+            const option = item.options[item.optionIndex]
+            totalPrice += option.coast * item.quantity
+        })
+        setTotalPrice(totalPrice)
+    }, [order])
+
     return (
         <>
          <div className={s.header}>
@@ -70,9 +80,12 @@ const Form = () => {
                     <h6 className={s.coast}>{item.quantity * item.options[item.optionIndex].coast} р</h6>
                 </div>
             </div>
-            
         ))}
         <hr />
+        <div className={s.finalCoast}>
+            <h2>Итого:</h2>
+            <h4>{totalPrice} р</h4>
+        </div>
         </>
     )
 }
