@@ -17,6 +17,7 @@
 .item h4 {
     margin-top: 0px;
     margin-bottom: 0px;
+    color: #373737;
 }
 
 .img {
@@ -45,22 +46,23 @@
     width: 30px;
     height: 30px;
     margin: auto 0px;
-    background-color: black;
-    color: aliceblue;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 5px;
+    border: 1px black solid;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: larger;
 }
 
-h6 {
+.bot h6 {
     margin: 0px;
     margin-left: 55%;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-h5 {
+.bot h5 {
     margin: auto 10px;
     font-size: 14px;
 }
@@ -70,19 +72,16 @@ h5 {
         background: #242426;
       }
 
-      .item h2 {
+      .item h2, h6, h5{
         color: aliceblue;
       }
 
       .item h4 {
-        color: aliceblue;
+        color: rgb(176, 176, 176);
       }
 
-      h6 {
+      .bot button {
         color: aliceblue;
-      }
-
-      h5 {
-        color: aliceblue;
+        background-color: black;
       }
 }
