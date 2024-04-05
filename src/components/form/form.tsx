@@ -1,13 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { userContext } from "../../App";
 import pic from '../../fonts/chiken.png'
 import s from './form.module.css'
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
 
+    const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
-    setOrder(order)
 
+    const decrement = (index: number) => {
+        const updatedOrder = [...order]
+        if (updatedOrder[index].quantity > 1) {
+            updatedOrder[index].quantity--
+            setOrder(updatedOrder)
+        } else {
+            updatedOrder.splice(index, 1)
+        }
+        setOrder(updatedOrder)
+    }
+
+    const increment = (index: number) => {
+        const updatedOrder = [...order]
+        updatedOrder[index].quantity++
+        setOrder(updatedOrder)
+    }
+
+    useEffect(() => {
+        if (order.length === 0) {
+            navigate('/')
+        }
+    }, [navigate, order, setOrder])
 
     return (
         <>
@@ -21,17 +44,12 @@ const Form = () => {
                 <h4>{item.options[item.optionIndex].name}<br/>{item.options[item.optionIndex].weight}г</h4>
                 <div className={s.bot}>
                     <div className={s.leftbot}>
-                        <button>-</button>
+                        <button onClick={() => decrement(index)}>-</button>
                         <h5>{item.quantity}</h5>
-                        <button>+</button>
+                        <button onClick={() => increment(index)}>+</button>
                     </div>
-                    <h6 className={s.coast}>{item.quantity * item.options[item.optionIndex].coast}р</h6>
+                    <h6 className={s.coast}>{item.quantity * item.options[item.optionIndex].coast} р</h6>
                 </div>
-                {/* <p>Name: {item.name}</p>
-                <p>Option: {item.options[item.optionIndex].name}</p>
-                <p>Quantity: {item.quantity}</p>
-                <p>Price per piece: {item.options[item.optionIndex].coast}р</p>
-                <p>Weight per piece: {item.options[item.optionIndex].weight}г</p> */}
             </div>
         ))}
         </>
