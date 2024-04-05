@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import React, { useState } from 'react';
 import './App.css';
 import ProductList from './components/productList/productList';
-import Form from './components/form/form';
+import Order from './components/order/order';
 
 export const userContext = React.createContext<any>(null)
 
@@ -16,7 +16,7 @@ function App() {
       <userContext.Provider value={{order, setOrder}}>
         <Routes>
           <Route path={'/'} element={<ProductList />}/>
-          <Route path={'form'} element={<Form />}/>
+          <Route path={'order'} element={<Order />}/>
         </Routes>
       </userContext.Provider>
     </>

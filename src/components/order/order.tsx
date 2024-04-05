@@ -13,10 +13,10 @@ import pic from '../../fonts/chiken.png'
 // import govno from '../../../fonts/govno.png'
 // import falafel from '../../../fonts/falafel.png'
 // import Барбекю from '../../../fonts/barbeku.png'
-import s from './form.module.css'
+import s from './order.module.css'
 import { useNavigate } from "react-router-dom";
 
-const Form = () => {
+const Order = () => {
 
     const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
@@ -90,4 +90,4 @@ const Form = () => {
     )
 }
 
-export default Form
+export default Order

@@ -255,7 +255,7 @@ const Shawarma = () => {
 
     const openForm = useCallback(() => {
         tg.MainButton.hide();
-        navigate('/form')
+        navigate('/order')
     }, [tg.MainButton, navigate])
 
     useEffect(() => {
