@@ -1,5 +1,7 @@
 .item {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
     height: 120px;
     margin-bottom: 5px;
     display: grid;
@@ -43,8 +45,8 @@
 }
 
 .bot button {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     margin: auto 0px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -67,6 +69,35 @@
     font-size: 14px;
 }
 
+hr {
+    width: 95%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #373737;
+    margin-top: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 22px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: rgb(101, 209, 0);
+    font-size: 18px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+
 @media (prefers-color-scheme: dark) {
     body {
         background: #242426;
@@ -83,5 +114,13 @@
       .bot button {
         color: aliceblue;
         background-color: black;
+      }
+
+      .header h1 {
+        color: aliceblue;
+      }
+
+      .header p {
+        color: rgb(161, 255, 10);
       }
 }

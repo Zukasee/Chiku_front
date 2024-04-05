@@ -44,9 +44,16 @@ const Form = () => {
         }
     }, [navigate, order, setOrder])
 
+    const toMenu = () => {
+        navigate('/')
+    }
+
     return (
         <>
-         form
+         <div className={s.header}>
+            <h1>Ваш заказ:</h1>
+            <p onClick={toMenu}>в меню</p>
+         </div>
          {order.map((item: any, index: any) => (
             <div className={s.item} key={index}>
                 <div className={s.img}>
@@ -63,7 +70,9 @@ const Form = () => {
                     <h6 className={s.coast}>{item.quantity * item.options[item.optionIndex].coast} р</h6>
                 </div>
             </div>
+            
         ))}
+        <hr />
         </>
     )
 }
