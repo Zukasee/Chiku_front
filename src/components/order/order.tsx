@@ -18,9 +18,11 @@ import { useNavigate } from "react-router-dom";
 
 const Order = () => {
 
+    const tg = (window as any).Telegram.WebApp;
     const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
     const [totalPrice, setTotalPrice] = useState<number>()
+    const [checked, setChecked] = useState()
 
     const decrement = (index: number) => {
         const updatedOrder = [...order]
@@ -48,6 +50,14 @@ const Order = () => {
     const toMenu = () => {
         navigate('/')
     }
+
+    useEffect(() => {
+        if (checked !== false) {
+            tg.MainButton.show();
+        } else {
+            tg.MainButton.hide();
+        }
+    }, [checked, setChecked, tg.MainButton])
 
     useEffect(() => {
         let totalPrice = 0 
@@ -86,6 +96,9 @@ const Order = () => {
             <h2>Итого:</h2>
             <h4>{totalPrice} р</h4>
         </div>
+        {/* <input className={s.comment}>
+        </input> */}
+        <input type="checkbox" checked={checked}></input>
         </>
     )
 }

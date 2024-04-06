@@ -271,7 +271,7 @@ const Shawarma = () => {
         } else {
             tg.MainButton.hide();
         }
-    })
+    }, [order, tg.MainButton, totalPrice])
 
     useEffect(() => {
         let totalPrice = 0

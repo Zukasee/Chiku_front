@@ -125,6 +125,14 @@ hr {
     margin-right: 5px;
 }
 
+.comment {
+    width: 90%;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: #242426;
@@ -153,5 +161,9 @@ hr {
 
       .finalCoast h2, .finalCoast h4 {
         color: aliceblue;
+      }
+
+      .comment {
+        background-color: #242426;
       }
 }
