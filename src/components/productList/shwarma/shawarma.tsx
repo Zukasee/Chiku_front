@@ -264,15 +264,7 @@ const Shawarma = () => {
             tg.offEvent('mainButtonClicked', openForm)
         } 
     }, [tg, openForm])
-
-    useEffect(() => {
-        if (totalPrice !== 0) {
-            tg.MainButton.show();
-        } else {
-            tg.MainButton.hide();
-        }
-    }, [order, tg.MainButton, totalPrice])
-
+    
     useEffect(() => {
         let totalPrice = 0
         order.forEach((item: OrderItem) => {
@@ -281,12 +273,21 @@ const Shawarma = () => {
         })
         setTotalPrice(totalPrice)
     }, [order])
-
+    
     useEffect(() => {
         tg.MainButton.setParams({
             text: `Далее ${totalPrice} p`
         })
     }, [totalPrice, order, tg.MainButton])
+    
+    useEffect(() => {
+        if (totalPrice !== 0) {
+            tg.MainButton.show();
+        } else {
+            tg.MainButton.hide();
+        }
+    }, [order, tg.MainButton, totalPrice])
+
 
     const handleAddToOrder = (item: MenuItem, optionIndex: number) => {
         // Проверка, является ли order массивом
