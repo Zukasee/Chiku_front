@@ -6,6 +6,7 @@ import mashroom from '../../../fonts/mashroom.png'
 import livanskaya from '../../../fonts/livanskaya.png'
 import mexican from '../../../fonts/mexican.png'
 import arab from '../../../fonts/arab.png'
+import arabX from '../../../fonts/arabX.png'
 import turkey from '../../../fonts/turkey.png'
 import chiky from '../../../fonts/chiku.png'
 import italy from '../../../fonts/italy.png'
@@ -151,7 +152,7 @@ const Shawarma = () => {
         },
         {
             name: 'Арабская Х',
-            pic: arab,
+            pic: arabX,
             ingridients: 'Лаваш, говядина, помидоры, соленый огурец, соус, картошка',
             options: [
                 {
