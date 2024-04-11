@@ -17,7 +17,7 @@ const Form = () => {
     return (
         <>
             <div className={s.header}>
-                <h2>Запоните данный:</h2>
+                <h2>Заполните данные:</h2>
                 <h4 onClick={toOrder}>редактировать заказ</h4>
             </div>
             <form className={s.form}>
