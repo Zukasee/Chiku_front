@@ -222,7 +222,7 @@ hr {
         color: aliceblue;
       }
 
-      .comment {
+      .comment, .custom {
         background-color: #242426;
       }
 }
