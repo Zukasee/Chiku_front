@@ -21,7 +21,7 @@ const Order = () => {
     const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
     const [totalPrice, setTotalPrice] = useState<number>()
-    const [checked, setChecked] = useState()
+    const [checked, setChecked] = useState(false)
 
     const decrement = (index: number) => {
         const updatedOrder = [...order]
@@ -68,6 +68,10 @@ const Order = () => {
         console.log(order)
     }, [order])
 
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setChecked(event.target.checked)
+    }
+
     return (
         <>
          <div className={s.header}>
@@ -96,9 +100,13 @@ const Order = () => {
             <h2>Итого:</h2>
             <h4>{totalPrice} р</h4>
         </div>
-        {/* <input className={s.comment}>
-        </input> */}
-        <input type="checkbox" checked={checked}></input>
+        <div>
+            <label className={s.checkboxDiv}>
+                <input className={s.real} type="checkbox" checked={checked} onChange={handleCheckboxChange}/>
+                <span className={s.custom}></span>
+                <h4 className={s.forinput}>С правилами заказа ознакомлен</h4>
+            </label>
+        </div>
         </>
     )
 }

@@ -9,8 +9,10 @@ const Form = () => {
 
     return (
         <>
-            Form
-            
+            <input>Ваше имя</input>
+            <input>Ваш номер телефона</input>
+            через сколько заберете
+            <input>Комментарии к заказу</input>
         </>
     )
 }

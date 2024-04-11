@@ -133,6 +133,64 @@ hr {
     margin-right: 5%;
 }
 
+.checkboxDiv {
+    display: flex;
+    margin-left: 10px;
+}
+
+.real {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.real:focus + .custom {
+    box-shadow: 0px 0px 0px 1px #38577a, 0px 0px 10px #7e9bbd;
+}
+
+.custom {
+    width: 20px;
+    height: 20px;
+    background-color: whitesmoke;
+    border: 2px solid #7e9bbd;
+    border-radius: 4px;
+    margin-right: 5px;
+    /* vertical-align: sub; */
+    position: relative;
+}
+
+.custom::before {
+        content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    
+    background-image: url('../../fonts/ok.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    margin-top: 1px;
+
+    transition: 0.2s ease-in;
+}
+
+.real:checked + .custom::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.forinput {
+    margin: 0px;
+    font-size: 16px;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: #242426;
