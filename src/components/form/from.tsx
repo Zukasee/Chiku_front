@@ -17,7 +17,7 @@ const Form = () => {
                 </label>
                 <label className={s.field_item}>
                     <input type='text' required />
-                    <span>телефон</span>
+                    <span>Телефон</span>
                     <div className={s.line}></div>
                 </label>
                 <label className={s.field_item}>
