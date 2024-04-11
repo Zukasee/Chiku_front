@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { userContext } from "../../App";
 // import Чикен from '../../fonts/chiken.png'
 // import Студенческая from '../../fonts/student.png'
@@ -22,6 +22,18 @@ const Order = () => {
     const {order, setOrder} = useContext(userContext)
     const [totalPrice, setTotalPrice] = useState<number>()
     const [checked, setChecked] = useState(false)
+
+    const openForm = useCallback(() => {
+        tg.MainButton.hide();
+        navigate('/form')
+    }, [tg.MainButton, navigate])
+
+    useEffect(() => {
+        tg.onEvent('mainButtonClicked', openForm)
+        return () => {
+            tg.offEvent('mainButtonClicked', openForm)
+        } 
+    }, [tg, openForm])
 
     const decrement = (index: number) => {
         const updatedOrder = [...order]
