@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-// import s from './form.module.css'
+import s from './form.module.css'
 import { userContext } from '../../App'
 
 const Form = () => {
@@ -9,7 +9,24 @@ const Form = () => {
 
     return (
         <>
-            Форма
+            <form className={s.form}>
+                <h3>Регестрация</h3>
+                <label className={s.field_item}>
+                    <input type='text' required />
+                    <span>Имя</span>
+                    <div className={s.line}></div>
+                </label>
+                <label className={s.field_item}>
+                    <input type='text' required />
+                    <span>телефон</span>
+                    <div className={s.line}></div>
+                </label>
+                <label className={s.field_item}>
+                    <input type='text' required />
+                    <span>Комментарии к заказу</span>
+                    <div className={s.line}></div>
+                </label>
+            </form>            
             {/* <input>Ваше имя</input>
             <input>Ваш номер телефона</input>
             через сколько заберете

@@ -84,6 +84,10 @@ const Order = () => {
         setChecked(event.target.checked)
     }
 
+    const toForm = () => {
+        navigate('/form')
+    }
+
     return (
         <>
          <div className={s.header}>
@@ -119,6 +123,7 @@ const Order = () => {
                 <h4 className={s.forinput}>С правилами заказа ознакомлен</h4>
             </label>
         </div>
+        <button onClick={toForm}>toform</button>
         </>
     )
 }
