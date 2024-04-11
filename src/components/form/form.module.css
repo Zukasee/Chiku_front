@@ -52,7 +52,7 @@
 @media (prefers-color-scheme: dark) {
     .field_item input:focus + span,
     .field_item input:valid + span {
-        background-color: #2f2f32;
+        background-color: #242426;
     }
 
     .field_item input, .field_item span {
