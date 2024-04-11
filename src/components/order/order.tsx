@@ -35,7 +35,6 @@ const Order = () => {
         } 
     }, [tg, openForm])
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const decrement = (index: number) => {
         const updatedOrder = [...order]
         if (updatedOrder[index].quantity > 1) {
@@ -47,7 +46,6 @@ const Order = () => {
         setOrder(updatedOrder)
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const increment = (index: number) => {
         const updatedOrder = [...order]
         updatedOrder[index].quantity++
@@ -73,6 +71,12 @@ const Order = () => {
     }, [checked, setChecked, tg.MainButton])
 
     useEffect(() => {
+        tg.MainButton.setParams({
+            text: `Далее ${totalPrice} p`
+        })
+    }, [totalPrice, order, tg.MainButton])
+
+    useEffect(() => {
         let totalPrice = 0 
         order.forEach((item:any) => {
             const option = item.options[item.optionIndex]
@@ -80,7 +84,7 @@ const Order = () => {
         })
         setTotalPrice(totalPrice)
         console.log(order)
-    }, [order, increment, decrement])
+    }, [order])
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setChecked(event.target.checked)

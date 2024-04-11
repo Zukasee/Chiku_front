@@ -27,14 +27,15 @@
     background: transparent;
     position: absolute;
     bottom: 0;
+    font-size: 15px;
 }
 
 .field_item span {
-    color: black;
+    color: rgb(0, 0, 0);
     position: absolute;
     top: 15px;
     left: 20px;
-    font-weight: 500;
+    font-weight: 600;
     transition: 0.2s;
     cursor: text;
 }
@@ -48,12 +49,13 @@
     padding: 0 7px;
 }
 
-.field_item input:focus + input,
-.field_item input:valid + input {
-    padding-top: 0 !important; 
-}
-
-
 @media (prefers-color-scheme: dark) {
-    
+    .field_item input:focus + span,
+    .field_item input:valid + span {
+        background-color: #2f2f32;
+    }
+
+    .field_item input, .field_item span {
+        color: aliceblue;
+    }
 }
