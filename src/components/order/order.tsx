@@ -66,6 +66,7 @@ const Order = () => {
             totalPrice += option.coast * item.quantity
         })
         setTotalPrice(totalPrice)
+        console.log(order)
     }, [order])
 
     return (
@@ -77,7 +78,7 @@ const Order = () => {
          {order.map((item: any, index: any) => (
             <div className={s.item} key={index}>
                 <div className={s.img}>
-                    <img src={pic} alt={item.name}/>
+                    <img src={item.pic} alt={item.name}/>
                 </div>
                 <h2>{item.name}</h2>
                 <h4>{item.options[item.optionIndex].name}<br/>{item.options[item.optionIndex].weight}г</h4>

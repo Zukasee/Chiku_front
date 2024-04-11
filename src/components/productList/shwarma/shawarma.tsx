@@ -264,7 +264,7 @@ const Shawarma = () => {
             tg.offEvent('mainButtonClicked', openForm)
         } 
     }, [tg, openForm])
-    
+
     useEffect(() => {
         let totalPrice = 0
         order.forEach((item: OrderItem) => {
@@ -316,7 +316,7 @@ const Shawarma = () => {
 
         return (
             <>
-            {
+            { 
                 shawarmaMenu.map((item: MenuItem, index: number) => (
                     <div key={index} className={s.mainShawa}> 
                         <div className={s.img}>
@@ -341,7 +341,7 @@ const Shawarma = () => {
                         </div>
                     </div>
                 ))
-            }
+            } 
             <button onClick={openForm}>form</button>
         </>
     )
