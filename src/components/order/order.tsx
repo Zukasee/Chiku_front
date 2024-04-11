@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { userContext } from "../../App";
-import pic from '../../fonts/chiken.png'
 // import Чикен from '../../fonts/chiken.png'
 // import Студенческая from '../../fonts/student.png'
 // import Машрум from '../../fonts/mashroom.png'
