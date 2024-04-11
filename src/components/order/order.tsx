@@ -78,7 +78,7 @@ const Order = () => {
         })
         setTotalPrice(totalPrice)
         console.log(order)
-    }, [order])
+    }, [order, increment, decrement])
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setChecked(event.target.checked)

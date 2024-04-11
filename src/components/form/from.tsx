@@ -10,7 +10,6 @@ const Form = () => {
     return (
         <>
             <form className={s.form}>
-                <h3>Регестрация</h3>
                 <label className={s.field_item}>
                     <input type='text' required />
                     <span>Имя</span>

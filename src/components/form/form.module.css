@@ -5,8 +5,8 @@
 }
 
 .form {
-    background-color: aliceblue;
-    padding: 20px 40px 30px;
+    background-color: rgba(240, 248, 255, 0);
+    padding: 20px 30px 30px;
 }
 
 .field_item {
@@ -16,11 +16,12 @@
     position: relative;
     border: 1px solid black;
     display: block;
+    border-radius: 7px;
 }
 
 .field_item input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
     outline: none;
     background: transparent;
@@ -41,26 +42,16 @@
 .field_item input:focus + span,
 .field_item input:valid + span {
     top: -8px;
-    left: 10px;
-    background-color: aliceblue;
+    left: 13px;
+    background-color: rgb(242 242 242);
     font-size: 12px;
     padding: 0 7px;
 }
 
-.line {
-    width: 0;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    background-color: black;
-    transition: 0.2s;
-    left: -1px;
+.field_item input:focus + input,
+.field_item input:valid + input {
+    padding-top: 0 !important; 
 }
-
-.field_item input:focus ~ .line,
-.field_item input:valid ~ .line {
-    width: calc(100% + 2px);
-} 
 
 
 @media (prefers-color-scheme: dark) {
