@@ -27,7 +27,7 @@ const Form = () => {
         tg.MainButton.setParams({
             text: `Обработка заказа`,
         });
-        fetch('/', {
+        fetch('https://morning-scrubland-61652-88f7afd9cea2.herokuapp.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
