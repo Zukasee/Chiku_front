@@ -23,6 +23,10 @@
     background-color: #dadada;
 }
 
+.top {
+    font-size: 20px;
+    margin: 0px 0px 10px;
+}
 
 @media (prefers-color-scheme: dark) {
     .time {
@@ -32,6 +36,12 @@
     }
 
     .selectedTime {
-        background-color: #5f5f5f;
+        background-color: #585858;
+    }
+}
+
+@media (max-width: 363px) {
+    .top {
+        font-size: 17px;
     }
 }

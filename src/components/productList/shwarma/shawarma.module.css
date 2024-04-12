@@ -44,6 +44,7 @@
     height: 70px;
     border-radius: 7px;
     min-width: 57px;
+    max-width: 62px;
     border: 1px solid rgb(174, 4, 4);
 }
 

@@ -33,7 +33,7 @@ const Timer = () => {
 
     return (
         <>
-            Время выдачи заказа
+            <h2 className={s.top}>Выберите время выдачи заказа</h2>
             <div className={s.times}>
                 {times.map((timeObject, index) => (
                     <div key={index} className={`${s.time} ${index === selectedTime ? s.selectedTime : ''}`} onClick={() => handleClickTime(index)}>
