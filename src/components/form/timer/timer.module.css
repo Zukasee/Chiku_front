@@ -40,6 +40,10 @@
         background-color: #585858;
         border: 2px #5f5f5f solid
     }
+
+    .topTimer {
+        color: aliceblue;
+    }
 }
 
 @media (max-width: 363px) {
