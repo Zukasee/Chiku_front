@@ -50,24 +50,24 @@
 
 .buttonShava h4 {
     font-size: 8px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin: 3px auto;
     color: aliceblue;
     font-size: 20px;
+    align-items: center;
 }
 
 .buttonShava p {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0px auto;
     color: aliceblue;
     font-size: 10px;
     padding: 0 5px;
+    align-items: center;
 }
 
 .buttonShava h5 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0px auto;
     color: aliceblue;
+    align-items: center;
 }
 
 .buttonColor0 {
