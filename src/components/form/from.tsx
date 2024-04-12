@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 import s from './form.module.css'
 import { userContext } from '../../App'
 import { useNavigate } from 'react-router-dom'
@@ -6,12 +6,67 @@ import Timer from './timer/timer'
 
 const Form = () => {
 
-    const [comment, setComment] = useState<string>()
-    const [userPhone, setUserPhone] = useState<string>()
-    const [userName, setUserName] = useState<string>()
+    const tg = (window as any).Telegram.WebApp;
+    const queryId = tg.initDataUnsafe?.query_id
+    const [comment, setComment] = useState<string>('')
+    const [userPhone, setUserPhone] = useState<string>('')
+    const [userName, setUserName] = useState<string>('')
+    const [totalPrice, setTotalPrice] = useState<number>()
     const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
     setOrder(order)
+
+    const onSendData = useCallback(() => {
+        const data = {
+            userName,
+            userPhone,
+            comment,
+            order,
+            queryId
+        }
+        tg.MainButton.setParams({
+            text: `Обработка заказа`,
+        });
+        fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        tg.sendData(JSON.stringify(data))
+    }, [userName, userPhone, comment, order, queryId, tg])
+
+    useEffect(() => {
+        tg.onEvent('mainButtonClicked', onSendData)
+        return () => {
+            tg.offEvent('mainButtonClicked', onSendData)
+        }
+    }, [onSendData, tg])
+
+    useEffect(() => {
+        if (!userName || !userPhone) {
+            tg.MainButton.hide()
+        } else {
+            tg.MainButton.show()
+        }
+    }, [tg, userName, userPhone])
+
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: `Далее ${totalPrice} p`
+        })
+    }, [totalPrice, order, tg.MainButton])
+
+    useEffect(() => {
+        let totalPrice = 0 
+        order.forEach((item:any) => {
+            const option = item.options[item.optionIndex]
+            totalPrice += option.coast * item.quantity
+        })
+        setTotalPrice(totalPrice)
+        console.log(order)
+    }, [order])
 
     const onChangeUserName = (e: any) => {
         setUserName(e.target.value)
