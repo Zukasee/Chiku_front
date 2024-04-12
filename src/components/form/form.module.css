@@ -73,6 +73,7 @@
     .field_item input:focus + span,
     .field_item input:valid + span {
         background-color: #242426;
+        color: #c5c5c5;
     }
 
     .field_item input {
