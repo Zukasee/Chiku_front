@@ -96,7 +96,7 @@
 }
 
 @media (max-width: 363px) {
-    /* .header h2 {
+    .header h2 {
         font-size: 20px;
         margin-top: 10px;
         margin-left: 5px;
@@ -107,5 +107,5 @@
         margin-right: 0px;  
         font-size: 14px;
         width: 110px;
-    } */
+    }
 }
