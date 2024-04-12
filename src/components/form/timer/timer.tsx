@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import dayjs from 'dayjs';
 import s from './timer.module.css'
 
 const Timer = () => {
 
     const [selectedTime, setSelectedTime] = useState(null)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [time, setTime] = useState(new Date())
-    const [pickerValue, setPickerValue] = useState(dayjs('12:08', 'HH:mm'))
 
     const times = [
         {
