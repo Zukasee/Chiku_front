@@ -8,7 +8,7 @@
 .time {
     width: 30%;
     height: 45px;
-    background-color: aliceblue;
+    background-color: #ece4e4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,8 @@
 }
 
 .selectedTime {
-    background-color: #dadada;
+    background-color: rgb(205, 187, 187);
+    border: 2px #000000 solid;
 }
 
 .topTimer {
@@ -37,6 +38,7 @@
 
     .selectedTime {
         background-color: #585858;
+        border: 2px #5f5f5f solid
     }
 }
 

@@ -42,7 +42,7 @@
 .field_item input:valid + span {
     top: -8px;
     left: 13px;
-    background-color: rgb(242 242 242);
+    background-color: #ece4e4;
     font-size: 12px;
     padding: 0 7px;
 }
