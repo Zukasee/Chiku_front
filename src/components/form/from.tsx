@@ -28,7 +28,7 @@ const Form = () => {
             text: `Обработка заказа`,
         });
         // https://morning-scrubland-61652-88f7afd9cea2.herokuapp.com
-        fetch('http://localhost:8000', {
+        fetch('https://chiku-back.onrender.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
