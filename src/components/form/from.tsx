@@ -12,7 +12,7 @@ const Form = () => {
     const [userPhone, setUserPhone] = useState<string>('')
     const [userName, setUserName] = useState<string>('')
     const [totalPrice, setTotalPrice] = useState<number>()
-    const [selectedTime, setSelectedTime] = useState<number | null>(null)
+    const [selectedTime, setSelectedTime] = useState<any>(null)
     const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
     setOrder(order)
@@ -57,7 +57,8 @@ const Form = () => {
         } else {
             tg.MainButton.show()
         }
-    }, [tg, userName, userPhone])
+        console.log(selectedTime)
+    }, [selectedTime, tg, userName, userPhone])
 
     useEffect(() => {
         tg.MainButton.setParams({
@@ -72,7 +73,6 @@ const Form = () => {
             totalPrice += option.coast * item.quantity
         })
         setTotalPrice(totalPrice)
-        console.log(order)
     }, [order])
 
     const onChangeUserName = (e: any) => {

@@ -2,12 +2,12 @@ import { useState } from 'react';
 import s from './timer.module.css'
 
 interface TimerProps {
-    handleSelectedTime: (timeIndex: number) => void;
+    handleSelectedTime: (timeIndex: any) => void;
 }
 
 const Timer:React.FC<TimerProps> = ({handleSelectedTime}) => {
 
-    const [selectedTime, setSelectedTime] = useState(null)
+    const [selectedTime, setSelectedTime] = useState<any>(null)
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [time, setTime] = useState(new Date())
 
@@ -33,6 +33,7 @@ const Timer:React.FC<TimerProps> = ({handleSelectedTime}) => {
         } else {
             setSelectedTime(index)
         }
+        handleSelectedTime(times[selectedTime])
     }
 
     return (
