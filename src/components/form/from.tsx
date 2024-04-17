@@ -52,7 +52,7 @@ const Form = () => {
     }, [onSendData, tg])
 
     useEffect(() => {
-        if (!userName || !userPhone) {
+        if (!userName || !userPhone || selectedTime == null) {
             tg.MainButton.hide()
         } else {
             tg.MainButton.show()

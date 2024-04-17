@@ -30,10 +30,11 @@ const Timer:React.FC<TimerProps> = ({handleSelectedTime}) => {
     const handleClickTime = (index: any) => {
         if (index === selectedTime) {
             setSelectedTime(null)
+            handleSelectedTime(null)
         } else {
             setSelectedTime(index)
+            handleSelectedTime(formatTime(times[index].newTime))
         }
-        handleSelectedTime(formatTime(times[index].newTime))
     }
 
     return (
