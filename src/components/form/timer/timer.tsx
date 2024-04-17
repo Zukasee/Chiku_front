@@ -33,7 +33,7 @@ const Timer:React.FC<TimerProps> = ({handleSelectedTime}) => {
         } else {
             setSelectedTime(index)
         }
-        handleSelectedTime(formatTime(times[selectedTime].newTime))
+        handleSelectedTime(formatTime(times[index].newTime))
     }
 
     return (
