@@ -28,7 +28,8 @@ const Form = () => {
             comment,
             order,
             queryId,
-            selectedTime
+            selectedTime,
+            totalPrice
         }
         tg.MainButton.setParams({
             text: `Обработка заказа`,
@@ -42,7 +43,7 @@ const Form = () => {
             body: JSON.stringify(data)
         })
         tg.sendData(JSON.stringify(data))
-    }, [userName, userPhone, comment, order, queryId, tg, selectedTime])
+    }, [userName, userPhone, comment, order, queryId, selectedTime, totalPrice, tg])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
@@ -62,7 +63,7 @@ const Form = () => {
 
     useEffect(() => {
         tg.MainButton.setParams({
-            text: `Далее ${totalPrice} p`
+            text: `Заказать ${totalPrice} p`
         })
     }, [totalPrice, order, tg.MainButton])
 
