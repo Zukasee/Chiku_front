@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import s from './timer.module.css'
 
-const Timer = () => {
+interface TimerProps {
+    handleSelectedTime: (timeIndex: number) => void;
+}
+
+const Timer:React.FC<TimerProps> = ({handleSelectedTime}) => {
 
     const [selectedTime, setSelectedTime] = useState(null)
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -12,9 +12,14 @@ const Form = () => {
     const [userPhone, setUserPhone] = useState<string>('')
     const [userName, setUserName] = useState<string>('')
     const [totalPrice, setTotalPrice] = useState<number>()
+    const [selectedTime, setSelectedTime] = useState<number | null>(null)
     const navigate = useNavigate()
     const {order, setOrder} = useContext(userContext)
     setOrder(order)
+
+    const handleSelectedTime = (timeIndex: number) => {
+        setSelectedTime(timeIndex);
+    }
 
     const onSendData = useCallback(() => {
         const data = {
@@ -22,7 +27,8 @@ const Form = () => {
             userPhone,
             comment,
             order,
-            queryId
+            queryId,
+            selectedTime
         }
         tg.MainButton.setParams({
             text: `Обработка заказа`,
@@ -36,7 +42,7 @@ const Form = () => {
             body: JSON.stringify(data)
         })
         tg.sendData(JSON.stringify(data))
-    }, [userName, userPhone, comment, order, queryId, tg])
+    }, [userName, userPhone, comment, order, queryId, tg, selectedTime])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
@@ -108,7 +114,7 @@ const Form = () => {
                     <span>Телефон</span>
                     <div className={s.line}></div>
                 </label>
-                <Timer />
+                <Timer handleSelectedTime={handleSelectedTime}/>
                 <label className={s.field_item}>
                     <input type='text' value={comment} onChange={onChangeComment} required />
                     <span>Комментарии к заказу</span>
