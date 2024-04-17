@@ -9,7 +9,7 @@ const Form = () => {
     const tg = (window as any).Telegram.WebApp;
     const queryId = tg.initDataUnsafe?.query_id
     const [comment, setComment] = useState<string>('')
-    const [userPhone, setUserPhone] = useState<string>('')
+    const [userPhone, setUserPhone] = useState<string>('+375')
     const [userName, setUserName] = useState<string>('')
     const [totalPrice, setTotalPrice] = useState<number>()
     const [selectedTime, setSelectedTime] = useState<any>(null)
@@ -52,7 +52,7 @@ const Form = () => {
     }, [onSendData, tg])
 
     useEffect(() => {
-        if (!userName || !userPhone || selectedTime == null) {
+        if (!userName || userPhone.length!==13 || selectedTime == null) {
             tg.MainButton.hide()
         } else {
             tg.MainButton.show()
@@ -80,9 +80,11 @@ const Form = () => {
     }
 
     const onChangeUserPhone = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const cleanedValue: string = e.target.value.replace(/[^0-9+]/g, '');
+        let cleanedValue: string = e.target.value.replace(/[^0-9+]/g, '');
         setUserPhone(cleanedValue);
     }
+    
+    
 
     const onChangeComment = (e: any) => {
         setComment(e.target.value)

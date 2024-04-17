@@ -1,25 +1,31 @@
-import { useState } from 'react';
-import s from './timer.module.css'
+import { useState, useEffect } from 'react';
+import s from './timer.module.css';
 
 interface TimerProps {
     handleSelectedTime: (timeIndex: any) => void;
 }
 
-const Timer:React.FC<TimerProps> = ({handleSelectedTime}) => {
+const Timer: React.FC<TimerProps> = ({ handleSelectedTime }) => {
+    const [selectedTime, setSelectedTime] = useState<any>(null);
+    const [currentTime, setCurrentTime] = useState(new Date());
 
-    const [selectedTime, setSelectedTime] = useState<any>(null)
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [time, setTime] = useState(new Date())
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 60000); // Обновление каждую минуту
+
+        return () => clearInterval(interval);
+    }, []);
 
     const times = [
         {
-            newTime: new Date(time.getTime() + 15 * 60000)
+            newTime: new Date(currentTime.getTime() + 15 * 60000)
         },
         {
-            newTime: new Date(time.getTime() + 20 * 60000)
+            newTime: new Date(currentTime.getTime() + 20 * 60000)
         },
         {
-            newTime: new Date(time.getTime() + 30 * 60000)
+            newTime: new Date(currentTime.getTime() + 30 * 60000)
         }
     ];
 
@@ -29,13 +35,18 @@ const Timer:React.FC<TimerProps> = ({handleSelectedTime}) => {
 
     const handleClickTime = (index: any) => {
         if (index === selectedTime) {
-            setSelectedTime(null)
-            handleSelectedTime(null)
+            setSelectedTime(null);
+            handleSelectedTime(null);
         } else {
-            setSelectedTime(index)
-            handleSelectedTime(formatTime(times[index].newTime))
+            setSelectedTime(index);
+            handleSelectedTime(formatTime(times[index].newTime));
+
+            setTimeout(() => {
+                setSelectedTime(null);
+                handleSelectedTime(null);
+            }, 60000)
         }
-    }
+    };
 
     return (
         <>
@@ -48,7 +59,7 @@ const Timer:React.FC<TimerProps> = ({handleSelectedTime}) => {
                 ))}
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Timer;
