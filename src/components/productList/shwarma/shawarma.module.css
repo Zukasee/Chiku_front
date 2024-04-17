@@ -142,4 +142,10 @@
         width: auto;
         margin-top: 7px;
     }
+
+    .img img {
+        height: 85%;
+        position: relative;
+        bottom: -15%;
+    }
 }
