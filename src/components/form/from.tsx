@@ -27,8 +27,8 @@ const Form = () => {
         tg.MainButton.setParams({
             text: `Обработка заказа`,
         });
-        // https://morning-scrubland-61652-88f7afd9cea2.herokuapp.com
-        fetch('https://chiku-back.onrender.com/', {
+        // https://chiku-back.onrender.com/ 
+        fetch('https://morning-scrubland-61652-88f7afd9cea2.herokuapp.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
