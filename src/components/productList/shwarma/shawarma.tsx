@@ -66,7 +66,7 @@ const Shawarma = () => {
                 {
                     name: 'студент',
                     weight: 400,
-                    coast: 5
+                    coast: 5.50
                 }
             ]
         },
@@ -238,12 +238,7 @@ const Shawarma = () => {
                 {
                     name: 'стандарт',
                     weight: 400,
-                    coast: 5
-                },
-                {
-                    name: 'сирийски',
-                    weight: 500,
-                    coast: 6
+                    coast: 7.50
                 }
             ]
         },
@@ -344,7 +339,7 @@ const Shawarma = () => {
                 ))
             } 
             {/* <button onClick={openForm}>form</button> */}
-            
+
         </>
     )
 }
