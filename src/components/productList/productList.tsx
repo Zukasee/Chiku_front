@@ -9,11 +9,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Keyboard,  Navigation } from 'swiper/modules';
+import { Keyboard,  Navigation, Pagination } from 'swiper/modules';
 
 import Shawarma from './shwarma/shawarma';
-import Garnish from './garnish/garnish';
-import Others from './others/others';
 
 const ProductList = () => {
     return (
@@ -24,14 +22,14 @@ const ProductList = () => {
         keyboard={{
           enabled: true,
         }}
+        pagination={true}
         navigation={false}
         autoHeight={true}
-        modules={[Keyboard, Navigation]}
+        modules={[Keyboard, Navigation, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide><Shawarma /></SwiperSlide>
-        <SwiperSlide><Garnish /></SwiperSlide>
-        <SwiperSlide><Others /></SwiperSlide>
+        {/* <SwiperSlide><Garnish /></SwiperSlide> */}
         </Swiper>
         </>
     )
