@@ -78,7 +78,7 @@ const Shawarma = () => {
                 {
                     name: 'стандарт',
                     weight: 500,
-                    coast: 8
+                    coast: 9
                 }
             ]
         },
