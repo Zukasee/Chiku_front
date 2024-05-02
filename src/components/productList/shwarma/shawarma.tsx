@@ -13,6 +13,7 @@ import italy from '../../../fonts/italy.png'
 import govno from '../../../fonts/govno.png'
 import falafel from '../../../fonts/falafel.png'
 import barbeku from '../../../fonts/barbeku.png'
+import komplex from '../../../fonts/komplex.png'
 
 import { userContext } from "../../../App";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +38,7 @@ const Shawarma = () => {
 
     const shawarmaMenu: MenuItem[] = [
         {
-            name: 'Чикен',
+            name: 'Шаурма "Чикен"',
             pic: shawermaImg,
             ingridients: `Лаваш, курица, капуста, помидоры, соленый огурец, соус`,
             options: [
@@ -59,7 +60,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Студенческая',
+            name: 'Шаурма "Студенческая"',
             pic: student,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус',
             options: [
@@ -71,7 +72,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Машрум',
+            name: 'Шаурма "Машрум"',
             pic: mashroom,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, кетчуп, соус сырный, сыр, грибы, майонез',
             options: [
@@ -83,7 +84,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Ливанская',
+            name: 'Шаурма "Ливанская"',
             pic: livanskaya,
             ingridients: 'Лаваш, курица, соленый огурец, соус, картошка',
             options: [
@@ -100,7 +101,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Арабская',
+            name: 'Шаурма "Арабская"',
             pic: arab,
             ingridients: 'Лаваш, курица, помидоры, соленый огурец, соус, картошка',
             options: [
@@ -117,7 +118,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Мексиканская',
+            name: 'Шаурма "Мексиканская"',
             pic: mexican,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус чесночный, соус острый, лук',
             options: [
@@ -134,7 +135,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Барбекю',
+            name: 'Шаурма "Барбекю"',
             pic: barbeku,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус барбекю, чесночный соус',
             options: [
@@ -151,7 +152,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Арабская Х',
+            name: 'Шаурма "Арабская Х"',
             pic: arabX,
             ingridients: 'Лаваш, говядина, помидоры, соленый огурец, соус, картошка',
             options: [
@@ -163,7 +164,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Турецкая',
+            name: 'Шаурма "Турецкая"',
             pic: turkey,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус турецкий, соус чесночный',
             options: [
@@ -180,7 +181,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Чику',
+            name: 'Шаурма "Чику"',
             pic: chiky,
             ingridients: 'Супер вкусный и супер секретный состав',
             options: [
@@ -192,7 +193,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Итальянская',
+            name: 'Шаурма "Итальянская"',
             pic: italy,
             ingridients: 'Лаваш, курица, капуста, помидоры, соленый огурец, соус томатный, соус чесночный, сыр, грибы',
             options: [
@@ -209,7 +210,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'с говядиной',
+            name: 'Шаурма "с говядиной"',
             pic: govno,
             ingridients: 'Лаваш, говядина, капуста, помидоры, соленый огурец, соус',
             options: [
@@ -231,7 +232,7 @@ const Shawarma = () => {
             ]
         },
         {
-            name: 'Фалафель',
+            name: 'Шаурма "Фалафель"',
             pic: falafel,
             ingridients: 'Лаваш, котлета из нута, капуста, помидоры, соленый огурец, соус',
             options: [
@@ -239,6 +240,18 @@ const Shawarma = () => {
                     name: 'стандарт',
                     weight: 400,
                     coast: 7.50
+                }
+            ]
+        },
+        {
+            name: 'Комплекс с курицей',
+            pic: komplex,
+            ingridients: 'Курица, картофель фри, свежие огурцы и помидоры, соус',
+            options: [
+                {
+                    name: 'стандарт',
+                    weight: 450,
+                    coast: 12.50
                 }
             ]
         },
@@ -318,7 +331,7 @@ const Shawarma = () => {
                         <div className={s.img}>
                             <img src={item.pic} alt={item.name}/>
                         </div>
-                        <h1 className={s.mainShawaName}>Шаурма "{item.name}"</h1>
+                        <h1 className={s.mainShawaName}>{item.name}</h1>
                         <div className={s.testForIngridients}>
                             <h3 className={s.mainShawaIngridients}>{item.ingridients}</h3>
                         </div>
