@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import s from './shawarma.module.css'
 import shawermaImg from '../../../fonts/chiken.png'
-import student from '../../../fonts/student.png'
+// import student from '../../../fonts/student.png'
 import mashroom from '../../../fonts/mashroom.png'
 import livanskaya from '../../../fonts/livanskaya.png'
 import mexican from '../../../fonts/mexican.png'
