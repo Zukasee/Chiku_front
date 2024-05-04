@@ -256,7 +256,7 @@ const Shawarma = () => {
                 {
                     name: 'говядина',
                     weight: 450,
-                    coast: 12.50
+                    coast: 17
                 }
             ]
         },
